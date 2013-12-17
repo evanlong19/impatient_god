@@ -4,9 +4,9 @@
 *.pidb
 *.unityproj
 .DS_Store
-/Library/FailedAssetImports.txt
-/Library/cache/
-/Library/previews/
-/Library/ScriptAssemblies
-/obj
-/Temp
+impatient_god/Library/FailedAssetImports.txt
+impatient_god/Library/cache/
+impatient_god/Library/previews/
+impatient_god/Library/ScriptAssemblies
+impatient_god/obj
+impatient_god/Temp
