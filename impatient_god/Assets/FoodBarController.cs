@@ -3,27 +3,51 @@ using System.Collections;
 
 public class FoodBarController : MonoBehaviour {
 
-	int foodCount = 4;
+	public static int maxFood = 5;
+	public static System.TimeSpan foodInterval = System.TimeSpan.FromSeconds(5);
+	
+	int foodCount;
+	System.DateTime lastFoodTime;
+	System.DateTime nextFoodTime;
 
-	public Sprite[] sprites = new Sprite[6];
+	public Sprite[] sprites = new Sprite[maxFood + 1];
 
 	public SpriteRenderer render;
 
 	// Use this for initialization
 	void Start () {
+		if (PlayerPrefs.HasKey ("foodCount")) {
+			foodCount = PlayerPrefs.GetInt ("foodCount");
+		} else {
+			foodCount = 5;
+		}
 		render.sprite = sprites[foodCount];
+		lastFoodTime = System.DateTime.Now;
+		print (System.DateTime.Now);
+		nextFoodTime = lastFoodTime.Add (foodInterval);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (System.DateTime.Now.CompareTo (nextFoodTime) > 0) {
+			//Add food!
+			foodCount = Mathf.Min(foodCount + 1, maxFood);
+			render.sprite = sprites[foodCount];
+			lastFoodTime = System.DateTime.Now;
+			nextFoodTime = lastFoodTime.Add (foodInterval);
+		}
 	}
 
-	public int useFood() {
+	public bool useFood() {
+		bool hasFood = foodCount > 0;
 		foodCount = Mathf.Max (0, --foodCount);
-		if (foodCount < sprites.GetLength (0)) {
+		if (foodCount <= maxFood) {
 			render.sprite = sprites[foodCount];
 		}
-		return foodCount;
+		return hasFood;
+	}
+	
+	void OnApplicationQuit() {
+		PlayerPrefs.SetInt ("foodCount", foodCount);
 	}
 }
