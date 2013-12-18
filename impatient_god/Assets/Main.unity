@@ -233,6 +233,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1904404373}
   - 132: {fileID: 1904404372}
+  - 114: {fileID: 1904404374}
   m_Layer: 0
   m_Name: InfoBar
   m_TagString: Untagged
@@ -274,6 +275,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1904404374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1904404371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5105a54e9edda49bf04970c40c70fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoBar: {fileID: 1904404372}
+  fadeRate: .200000003
+  defaultString: Click on City to create life.
 --- !u!1 &2103472857
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodBar: {fileID: 1110971153}
   cityFolkPrefab: {fileID: 100000, guid: 6f16941fe9414b24280bec2a384417ad, type: 2}
-  infoBar: {fileID: 1904404372}
+  infoBar: {fileID: 1904404374}
 --- !u!61 &2103472860
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -393,7 +408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodBar: {fileID: 1110971153}
   cityFolkPrefab: {fileID: 100000, guid: 6f16941fe9414b24280bec2a384417ad, type: 2}
-  infoBar: {fileID: 1904404372}
+  infoBar: {fileID: 1904404374}
 --- !u!61 &2130257151
 BoxCollider2D:
   m_ObjectHideFlags: 0
