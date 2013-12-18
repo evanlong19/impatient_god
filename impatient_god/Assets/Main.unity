@@ -134,7 +134,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.48000002
+  orthographic size: 4.78999996
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -192,7 +192,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: d9fdcbaf4a570034fb905750330410ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16ec37cf3a36c4a4ca5430dcefb9b135, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1110971152
 Transform:
@@ -201,8 +201,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1110971150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.72228622, y: .0450946689, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.57662296, y: -.00919437408, z: 0}
+  m_LocalScale: {x: 1.61483395, y: 1.61483347, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!114 &1110971153
@@ -217,12 +217,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: a5bfbd47250a64d4abd9bdbcc138d913, type: 3}
-  - {fileID: 21300000, guid: 3fc2f9a860cdf0a498c4e1826ad53a8b, type: 3}
-  - {fileID: 21300000, guid: 1fa9228536426c041b5dff8777ba65de, type: 3}
-  - {fileID: 21300000, guid: 7e4fce652b222084ab93adadd9d6fa4c, type: 3}
-  - {fileID: 21300000, guid: d9fdcbaf4a570034fb905750330410ba, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 6098a7e921eb9cb4b8e672baad2d8793, type: 3}
+  - {fileID: 21300000, guid: f41b0ba100c1cc446aaed79ddb33b845, type: 3}
+  - {fileID: 21300000, guid: 065dd76321f941849913921b6d202dd0, type: 3}
+  - {fileID: 21300000, guid: 02d17d35c7809cf49a08b33f316a4e36, type: 3}
+  - {fileID: 21300000, guid: 5bb7b9a45c48bfb42b403c06d1ef9cd5, type: 3}
+  - {fileID: 21300000, guid: 16ec37cf3a36c4a4ca5430dcefb9b135, type: 3}
   render: {fileID: 1110971151}
 --- !u!1 &2130257147
 GameObject:
@@ -263,7 +263,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_SortingLayerID: 1024582385
-  m_Sprite: {fileID: 21300000, guid: 9f2028d7d26feef478c777367d349601, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bbf2e4e22a4d5ac47b9ec306dfacb01b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &2130257149
 Transform:
@@ -272,7 +272,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2130257147}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.404577732, y: .0174324661, z: 0}
+  m_LocalPosition: {x: -2.7051785, y: .017433539, z: 0}
   m_LocalScale: {x: 2.53809643, y: 2.53809261, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -288,6 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodBar: {fileID: 1110971153}
+  cityFolkPrefab: {fileID: 100000, guid: 6f16941fe9414b24280bec2a384417ad, type: 2}
 --- !u!61 &2130257151
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -297,5 +298,5 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 1.00999999, y: 1}
+  m_Size: {x: 4.67000008, y: 3.50999999}
   m_Center: {x: 0, y: 0}
