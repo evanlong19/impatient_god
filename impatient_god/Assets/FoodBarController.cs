@@ -3,12 +3,14 @@ using System.Collections;
 
 public class FoodBarController : MonoBehaviour {
 
+	private static readonly System.DateTime UnixEpoch = new System.DateTime(1970, 1, 1, 0, 0, 0, System.DateTimeKind.Utc);
+
 	public static int maxFood = 5;
-	public static System.TimeSpan foodInterval = System.TimeSpan.FromSeconds(5);
+	public static long foodInterval = 5; //seconds
 
 	int foodCount = 5;
-	System.DateTime lastFoodTime;
-	System.DateTime nextFoodTime;
+	long lastFoodTime = GetCurrentUnixTimestampSeconds(); //seconds of UNIX time
+	long nextFoodTime; //seconds of UNIX time
 
 	public Sprite[] sprites = new Sprite[maxFood + 1];
 
@@ -16,19 +18,21 @@ public class FoodBarController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		foodCount += (int)((GetCurrentUnixTimestampSeconds () - lastFoodTime) / foodInterval);
+		foodCount = Mathf.Min (maxFood, foodCount);
+		lastFoodTime = GetCurrentUnixTimestampSeconds () - (GetCurrentUnixTimestampSeconds () - lastFoodTime) % foodInterval;
+		nextFoodTime = lastFoodTime + foodInterval;
 		render.sprite = sprites[foodCount];
-		lastFoodTime = System.DateTime.Now;
-		nextFoodTime = lastFoodTime.Add (foodInterval);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (System.DateTime.Now.CompareTo (nextFoodTime) > 0) {
+		if (GetCurrentUnixTimestampSeconds() > nextFoodTime) {
 			//Add food!
 			foodCount = Mathf.Min(foodCount + 1, maxFood);
 			render.sprite = sprites[foodCount];
-			lastFoodTime = System.DateTime.Now;
-			nextFoodTime = lastFoodTime.Add (foodInterval);
+			lastFoodTime = GetCurrentUnixTimestampSeconds();
+			nextFoodTime = lastFoodTime + foodInterval;
 		}
 	}
 
@@ -39,5 +43,10 @@ public class FoodBarController : MonoBehaviour {
 			render.sprite = sprites[foodCount];
 		}
 		return hasFood;
+	}
+
+	public static long GetCurrentUnixTimestampSeconds()
+	{
+		return (long) (System.DateTime.UtcNow - UnixEpoch).TotalSeconds;
 	}
 }

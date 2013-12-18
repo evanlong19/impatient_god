@@ -44,9 +44,9 @@ public class CityButton : MonoBehaviour {
 		print ("clicked!");
 		if (foodBar.useFood ()) {
 			print ("New folk!");
-			Vector3 newPosition = new Vector3(Random.Range(-cityBounds.x/2, cityBounds.x/2), 
-			                                  Random.Range(-cityBounds.y/2, cityBounds.y/2), 
-			                                  transform.position.z);
+			Vector3 newPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+			newPosition.x += Random.Range(-cityBounds.x, cityBounds.x);
+			newPosition.y += Random.Range(-cityBounds.y, cityBounds.y);
 			GameObject newFolk = (GameObject)Instantiate(cityFolkPrefab, newPosition, Quaternion.identity);
 			print (newFolk.transform.position);
 			folks[nFolks] = newFolk;
