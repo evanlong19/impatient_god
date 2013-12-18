@@ -20,15 +20,10 @@ public class CityButton : MonoBehaviour {
 	List<GameObject> folks = new List<GameObject>();
 	public List<char> folkDirections = new List<char>();
 	int nFolks;
-	System.DateTime lastDeathTime;
-	System.DateTime nextDeathTime;
 	long totalPlayTime;
 	long lastDeathTime;
 	long nextDeathTime;
-
-	Vector2 cityBounds;
-	GameObject[] folks;
-	int nFolks = 0;
+	
 	int livingFolks = 0;
 
 	// Use this for initialization
@@ -39,26 +34,20 @@ public class CityButton : MonoBehaviour {
 			print (nFolks);
 			int nFolksIter = 0;
 			while (nFolksIter < nFolks){
-				addFolk (nFolksIter);
+				addFolk ();
 				nFolksIter++;
 			}
 		} else {
 			nFolks = 0;
 		}
 		changeDirection ();
-		lastDeathTime = System.DateTime.Now;
-		nextDeathTime = lastDeathTime.Add (deathInterval);
-		//TODO: Randomize death Interval
-		folks = new GameObject[64];
 		lastDeathTime = GetCurrentUnixTimestampSeconds();	
 		nextDeathTime = lastDeathTime + (long)Random.Range(minDeathInterval, maxDeathInterval);
 	}
 
 	// Update is called once per frame
 	void Update () {
-
 		moveFolks ();
-		if (System.DateTime.Now.CompareTo (nextDeathTime) > 0) {
 		if (GetCurrentUnixTimestampSeconds() > nextDeathTime) {
 			//Kill a folk!
 			foreach (GameObject folk in folks) {
@@ -79,28 +68,16 @@ public class CityButton : MonoBehaviour {
 
 	void OnMouseUp () {
 		if (foodBar.useFood ()) {
-			addFolk(nFolks);
 			//print ("New folk!");
-			Vector3 newPosition;
-			GameObject newFolk;
 			if (Random.value < twinProbability) {
 				infoBar.setText ("Twins were born!!");
-				newPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-				newPosition.x += Random.Range(-cityBounds.x, cityBounds.x);
-				newPosition.y += Random.Range(-cityBounds.y, cityBounds.y);
-				newFolk = (GameObject)Instantiate(cityFolkPrefab, newPosition, Quaternion.identity);
-				folks[nFolks] = newFolk;
+				addFolk();
 				nFolks++;
 				livingFolks++;
 			} else {
 				infoBar.setText ("A new city folk is born!");
 			}
-			newPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-			newPosition.x += Random.Range(-cityBounds.x, cityBounds.x);
-			newPosition.y += Random.Range(-cityBounds.y, cityBounds.y);
-			newFolk = (GameObject)Instantiate(cityFolkPrefab, newPosition, Quaternion.identity);
-			folks[nFolks] = newFolk;
-			nFolks++;
+			addFolk();
 			livingFolks++;
 		} else {
 			infoBar.setText("Can't create more life, not enough food");
@@ -110,7 +87,7 @@ public class CityButton : MonoBehaviour {
 
 
 
-	void addFolk (int folkPos){
+	void addFolk (){
 		Vector3 newPosition = new Vector3(-1, -1, transform.position.z);
 		GameObject newFolk = (GameObject)Instantiate(cityFolkPrefab, newPosition, Quaternion.identity);
 		//print (newFolk.transform.position);
@@ -164,13 +141,9 @@ public class CityButton : MonoBehaviour {
 		}
 	}
 
-	void OnApplicationQuit() {
-		print ("exit");
-		PlayerPrefs.SetInt ("nFolks", nFolks);
-	}
-
 	void onApplicationQuit() {
 		totalPlayTime += (long)Time.realtimeSinceStartup;
+		PlayerPrefs.SetInt ("nFolks", nFolks);
 	}
 
 	public static long GetCurrentUnixTimestampSeconds()
