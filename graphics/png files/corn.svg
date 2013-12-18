@@ -1,0 +1,164 @@
+<svg width="36" height="39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:undefined="http://www.inkscape.org/namespaces/inkscape">
+ <defs>
+  <linearGradient id="imagebot_125">
+   <stop stop-color="#7ed249" id="imagebot_129" offset="0"/>
+   <stop stop-color="#286325" id="imagebot_128" offset="1"/>
+  </linearGradient>
+  <linearGradient id="imagebot_124">
+   <stop stop-color="#ffea00" offset="0" id="imagebot_127"/>
+   <stop stop-color="#ffffa4" offset="1" id="imagebot_126"/>
+  </linearGradient>
+  <linearGradient y2="0.28653" x2="-0.06576" y1="0.60153" x1="0.76773" id="imagebot_67" xlink:href="#imagebot_125"/>
+  <linearGradient y2="0.21429" x2="0" y1="0.72394" x1="0.52971" id="imagebot_87" xlink:href="#imagebot_125"/>
+  <linearGradient y2="0.83192" x2="0.3966" y1="0.67098" x1="0.21056" id="imagebot_83" xlink:href="#imagebot_124"/>
+  <linearGradient y2="0.77556" x2="0.5" y1="0.63997" x1="0.2958" id="imagebot_81" xlink:href="#imagebot_124"/>
+  <linearGradient y2="0.54459" x2="0.78787" y1="0.4363" x1="0.58266" id="imagebot_79" xlink:href="#imagebot_124"/>
+  <linearGradient y2="0.5" x2="1" y1="0.34236" x1="0.5941" id="imagebot_77" xlink:href="#imagebot_124"/>
+  <linearGradient y2="0.94294" x2="0.28894" y1="0.47147" x1="0.3718" id="imagebot_73" xlink:href="#imagebot_124"/>
+  <linearGradient y2="0.91092" x2="0" y1="0.45546" x1="0.31044" id="imagebot_63" xlink:href="#imagebot_124"/>
+  <linearGradient y2="0.91092" x2="0.2584" y1="0.45546" x1="0.5" id="imagebot_65" xlink:href="#imagebot_124"/>
+  <linearGradient y2="0.92285" x2="0.5" y1="0.66743" x1="0.5" id="imagebot_61" xlink:href="#imagebot_124"/>
+  <linearGradient y2="0.92976" x2="0.17595" y1="0.43907" x1="0.34811" id="imagebot_71" xlink:href="#imagebot_124"/>
+  <linearGradient y2="0.92367" x2="0.16932" y1="0.46183" x1="0.2952" id="imagebot_69" xlink:href="#imagebot_124"/>
+  <linearGradient y2="0.91092" x2="-0.24175" y1="0.45546" x1="0" id="imagebot_75" xlink:href="#imagebot_124"/>
+  <filter id="imagebot_45">
+   <feGaussianBlur id="imagebot_123" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_43">
+   <feGaussianBlur id="imagebot_122" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_47">
+   <feGaussianBlur id="imagebot_121" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_49">
+   <feGaussianBlur id="imagebot_120" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_51">
+   <feGaussianBlur id="imagebot_119" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_57">
+   <feGaussianBlur id="imagebot_118" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_59">
+   <feGaussianBlur id="imagebot_117" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_41">
+   <feGaussianBlur id="imagebot_116" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_39">
+   <feGaussianBlur id="imagebot_115" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_35">
+   <feGaussianBlur id="imagebot_114" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_37">
+   <feGaussianBlur id="imagebot_113" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_55">
+   <feGaussianBlur id="imagebot_112" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_53">
+   <feGaussianBlur id="imagebot_111" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_27">
+   <feGaussianBlur id="imagebot_110" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_29">
+   <feGaussianBlur id="imagebot_109" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_31">
+   <feGaussianBlur id="imagebot_108" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_33">
+   <feGaussianBlur id="imagebot_107" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_17">
+   <feGaussianBlur id="imagebot_106" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_19">
+   <feGaussianBlur id="imagebot_105" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_21">
+   <feGaussianBlur id="imagebot_104" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_23">
+   <feGaussianBlur id="imagebot_103" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_25">
+   <feGaussianBlur id="imagebot_102" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_15">
+   <feGaussianBlur id="imagebot_101" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_13">
+   <feGaussianBlur id="imagebot_100" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_11">
+   <feGaussianBlur id="imagebot_99" stdDeviation="0.06111" />
+  </filter>
+  <filter id="imagebot_9">
+   <feGaussianBlur id="imagebot_98" stdDeviation="0.06111" />
+  </filter>
+  <filter height="1.23476" y="-0.11738" width="1.46196" x="-0.23098" id="imagebot_7">
+   <feGaussianBlur id="imagebot_97" stdDeviation="0.17765" />
+  </filter>
+  <filter height="1.11016" y="-0.05508" width="1.77419" x="-0.38709" id="imagebot_5">
+   <feGaussianBlur id="imagebot_96" stdDeviation="0.17765" />
+  </filter>
+  <linearGradient id="imagebot_92">
+   <stop stop-color="#ffd73b" id="imagebot_94" offset="0"/>
+   <stop stop-color="#ee8400" id="imagebot_93" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="-0.01405" x2="0.08593" y1="0.4744" x1="0.68746" id="imagebot_85" xlink:href="#imagebot_92"/>
+  <filter height="1.14281" y="-0.0714" width="1.23802" x="-0.11901" id="imagebot_3">
+   <feGaussianBlur id="imagebot_91" stdDeviation="0.28346" />
+  </filter>
+ </defs>
+ <metadata id="imagebot_90"/>
+ <g>
+  <title>Layer 1</title>
+  <path fill="url(#imagebot_87)" stroke-width="1px" id="imagebot_86" d="M 6.52726 21.8105 C 8.40064 10.1501 15.781 7.08773 15.622 0 C 22.5837 8.0265 13.7766 14.1451 11.5799 21.4737 L 6.52726 21.8105 Z"/>
+  <path fill="url(#imagebot_85)" fill-rule="evenodd" id="imagebot_84" d="M 27.1799 2.29474 C 31.2536 4.87369 28.7668 13.4493 23.4049 21.6612 C 18.043 29.8731 14.9681 37.3605 7.33745 32.3782 C 2.25038 29.0566 5.32529 21.5692 10.6872 13.3573 C 16.0491 5.14535 23.8746 0.38948 27.1799 2.29474 Z"/>
+  <path fill="url(#imagebot_83)" stroke-width="1px" id="imagebot_82" d="M 6.44305 22.6526 C 12.1886 15.8729 16.0287 7.85089 25.222 2.10527 C 15.1489 7.95968 12.4764 15.6347 6.27463 22.4 L 6.44305 22.6526 Z"/>
+  <path fill="url(#imagebot_81)" stroke-width="1px" id="imagebot_80" d="M 5.85358 27.0316 C 12.9834 19.1719 17.1169 9.24225 26.9904 2.94737 C 15.6005 12.156 13.0676 19.3965 6.10621 27.6211 L 5.85358 27.0316 Z"/>
+  <path fill="url(#imagebot_79)" stroke-width="1px" id="imagebot_78" d="M 6.7799 31.4947 C 10.0641 28.6316 27.4354 4.74524 27.8325 3.78948 C 25.5533 7.78756 15.4817 22.3158 7.03253 31.8316 L 6.7799 31.4947 Z"/>
+  <path fill="url(#imagebot_77)" stroke-width="1px" id="imagebot_76" d="M 10.401 32.6737 C 13.5397 29.7871 26.4949 11.1288 28.843 6.65263 C 24.7206 15.7194 16.997 24.0564 10.6536 33.0947 L 10.401 32.6737 Z"/>
+  <path fill="url(#imagebot_75)" stroke-width="1px" id="imagebot_74" d="M 7.45358 27.1158 C 8.88066 29.2821 10.9412 30.5569 14.3588 31.8316 C 14.0846 32.38 8.48934 30.0127 7.45358 27.1158 Z"/>
+  <path fill="url(#imagebot_73)" stroke-width="1px" id="imagebot_72" d="M 13.947 8.85724 C 16.3017 12.665 22.3951 15.364 26.7595 14.951 C 21.6763 14.2958 17.068 12.9772 13.947 8.85724 Z"/>
+  <path fill="url(#imagebot_71)" stroke-width="1px" id="imagebot_70" d="M 9.13779 17.7684 C 10.5649 19.9347 15.4044 23.0622 18.822 24.3369 C 18.5478 24.8853 10.1735 20.6653 9.13779 17.7684 Z"/>
+  <path fill="url(#imagebot_69)" stroke-width="1px" d="M 6.61147 20.6316 C 8.03855 22.7979 11.8675 25.2517 15.2852 26.5263 C 15.0109 27.0748 7.64723 23.5285 6.61147 20.6316 Z" id="imagebot_68"/>
+  <path fill="url(#imagebot_67)" stroke-width="1px" id="imagebot_66" d="M 0.179899 34.2947 C 1.76324 32.9884 3.99278 31.5931 4.85573 29.248 C 5.01009 28.8285 3.3768 25.7457 3.94423 23.7314 C 4.83414 20.5724 6.17277 13.4889 5.61147 11.8947 C 9.10207 19.0991 7.50256 20.8866 7.03892 24.8527 C 6.69341 27.8084 6.37074 31.5161 7.25358 32.1263 C 15.4525 29.4691 18.7778 22.2252 24.1346 15.5008 C 29.2611 9.06552 31.2008 13.1535 35.3694 5.94737 C 35.7185 10.5286 33.161 11.5984 27.7234 17.1071 C 23.3165 21.5717 23.4407 27.4353 19.5167 31.7895 C 16.1086 34.7833 11.6979 35.0691 7.84305 34.0421 C 5.9777 34.6775 6.03825 36.8537 5.1799 38.2947 C 2.78937 37.9211 0.38534 36.9067 0.179899 34.2947 Z"/>
+  <path fill="url(#imagebot_65)" stroke-width="1px" id="imagebot_64" d="M 21.1799 3.2 C 22.607 5.36631 24.6675 6.64114 28.0852 7.91579 C 27.8109 8.46422 22.2156 6.09691 21.1799 3.2 Z"/>
+  <path fill="url(#imagebot_63)" stroke-width="1px" d="M 19.4957 6.98948 C 20.9228 9.15578 22.9833 10.4306 26.4009 11.7053 C 26.1267 12.2537 20.5314 9.88639 19.4957 6.98948 Z" id="imagebot_62"/>
+  <path fill="url(#imagebot_61)" stroke-width="1px" d="M 11.243 12.8842 C 12.6701 15.0505 16.7517 17.4201 20.1694 18.6947 C 19.8951 19.2432 12.2788 15.7811 11.243 12.8842 Z" id="imagebot_60"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_59)" fill-opacity="0.47556" id="imagebot_58" d="M 11.4074 19.7321 C 10.5737 19.1069 9.97827 18.4519 9.97827 18.4519 L 12.509 15.147 C 11.2993 17.0963 9.68788 18.501 11.4074 19.7321 Z"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_57)" fill-opacity="0.47556" d="M 9.91872 17.8564 C 9.32326 17.7671 8.90644 16.3975 8.90644 16.3975 L 10.931 13.3011 C 9.69159 15.4885 8.73514 16.8337 9.91872 17.8564 Z" id="imagebot_56"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_55)" fill-opacity="0.47556" id="imagebot_54" d="M 14.206 15.5639 C 14.0274 15.147 12.896 14.373 12.896 14.373 L 15.4267 11.0682 C 13.5918 13.8808 12.9927 14.0053 14.206 15.5639 Z"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_53)" fill-opacity="0.47556" d="M 12.4196 14.0157 C 12.241 13.5989 11.4371 12.5568 11.4371 12.5568 L 13.551 9.66884 C 11.7311 12.1613 11.761 12.414 12.4196 14.0157 Z" id="imagebot_52"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_51)" fill-opacity="0.47556" id="imagebot_50" d="M 8.96599 22.6796 C 8.54916 22.5307 7.65598 21.4887 7.65598 21.4887 L 9.56144 18.8984 C 8.26249 20.9072 7.63354 21.5676 8.96599 22.6796 Z"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_49)" fill-opacity="0.47556" d="M 11.1989 24.466 C 10.4971 24.0321 9.9462 23.5705 9.65076 23.2751 L 11.4074 20.8932 C 9.78826 22.943 9.98506 23.8008 11.1989 24.466 Z" id="imagebot_48"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_47)" fill-opacity="0.47556" id="imagebot_46" d="M 14.5335 26.1928 C 13.4022 25.6271 12.896 25.0912 12.896 25.0912 L 14.5335 22.9178 C 13.2195 24.7605 12.9845 25.2898 14.5335 26.1928 Z"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_45)" fill-opacity="0.47556" d="M 10.9905 30.3015 C 10.4546 29.7656 9.68054 29.1106 9.68054 29.1106 L 12.2708 25.776 C 10.9718 27.6359 9.53901 29.0108 10.9905 30.3015 Z" id="imagebot_44"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_43)" fill-opacity="0.47556" id="imagebot_42" d="M 8.31098 28.3365 C 8.13234 27.9196 7.32848 26.6096 7.32848 26.6096 L 9.29349 23.8407 C 7.96476 25.9091 7.45491 26.4801 8.31098 28.3365 Z"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_41)" fill-opacity="0.47556" d="M 13.6403 21.4887 C 12.9556 21.2207 11.9731 20.1787 11.9731 20.1787 L 14.206 16.8143 C 12.788 19.1804 12.0399 20.4362 13.6403 21.4887 Z" id="imagebot_40"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_39)" fill-opacity="0.47556" id="imagebot_38" d="M 16.7069 23.2453 C 15.9626 22.7987 15.0694 22.2926 15.0694 22.2926 L 17.6001 18.9878 C 15.7466 21.339 15.1959 22.4011 16.7069 23.2453 Z"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_37)" fill-opacity="0.47556" d="M 16.826 17.0228 C 16.1413 16.5464 14.9206 15.8616 14.9206 15.8616 L 17.4513 12.5568 C 15.8546 14.5656 15.1661 15.7619 16.826 17.0228 Z" id="imagebot_36"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_35)" fill-opacity="0.47556" id="imagebot_34" d="M 20.3095 18.5709 C 19.4163 18.1244 18.4933 17.7075 18.4933 17.7075 L 21.024 14.4027 C 19.4273 16.4115 18.7984 17.578 20.3095 18.5709 Z"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_33)" fill-opacity="0.47556" d="M 23.1974 14.1348 C 22.5022 14.2345 21.2558 13.7839 21.4111 13.6286 L 23.3463 10.9788 C 21.9563 13.1116 20.9057 14.0076 23.1974 14.1348 Z" id="imagebot_32"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_31)" fill-opacity="0.47556" id="imagebot_30" d="M 19.6545 13.1225 C 18.9399 12.8545 17.9574 12.14 17.9574 12.14 L 20.1011 9.40088 C 18.3845 11.5535 18.1334 12.2905 19.6545 13.1225 Z"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_29)" fill-opacity="0.47556" d="M 17.3619 11.9018 C 16.7367 11.6934 15.8138 10.8002 15.8138 10.8002 L 18.4933 7.61451 C 16.8686 9.62889 15.7053 10.676 17.3619 11.9018 Z" id="imagebot_28"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_27)" fill-opacity="0.47556" id="imagebot_26" d="M 15.3969 10.3834 C 15.2183 9.96657 14.2953 9.10315 14.2953 9.10315 C 15.1984 7.84048 16.1016 7.07707 17.0047 6.09609 C 15.2624 7.99569 14.1906 8.87473 15.3969 10.3834 Z"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_25)" fill-opacity="0.47556" d="M 19.3865 6.24495 C 19.2079 5.82813 18.4635 5.2029 18.4635 5.2029 C 19.1241 4.66873 19.8515 4.10783 20.9049 3.41652 C 19.8144 4.41302 18.4113 4.80543 19.3865 6.24495 Z" id="imagebot_24"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_23)" fill-opacity="0.47556" id="imagebot_22" d="M 20.4881 8.12065 C 20.3095 7.70383 19.5056 6.89996 19.5056 6.89996 C 20.2109 5.97831 21.0515 5.32742 21.8279 4.54789 C 20.1121 6.70553 19.1557 6.59181 20.4881 8.12065 Z"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_21)" fill-opacity="0.47556" d="M 22.4233 9.8177 C 22.2447 9.40088 21.1133 8.62678 21.1133 8.62678 L 23.644 5.32199 C 22.0473 7.33076 21.0909 8.52705 22.4233 9.8177 Z" id="imagebot_20"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_19)" fill-opacity="0.47556" id="imagebot_18" d="M 25.4602 11.2468 C 24.8052 11.0384 23.7333 10.3536 23.7333 10.3536 L 25.7579 7.46564 C 24.459 9.62328 23.5323 10.5218 25.4602 11.2468 Z"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_17)" fill-opacity="0.47556" d="M 27.5145 12.14 C 26.8297 11.7827 26.532 11.5148 26.532 11.5148 C 26.6351 10.6931 27.298 9.68476 28.11 8.62679 C 26.6068 11.3396 26.3391 11.2147 27.5145 12.14 Z" id="imagebot_16"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_15)" fill-opacity="0.47556" id="imagebot_14" d="M 27.0381 7.46564 C 26.6213 7.19768 26.0556 6.92973 26.0556 6.92973 L 27.6634 4.54789 C 26.5829 5.9713 26.0357 6.86225 27.0381 7.46564 Z"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_13)" fill-opacity="0.47556" d="M 25.2815 6.632 C 24.567 6.3045 23.9715 5.73881 23.9715 5.73881 C 24.1746 5.37676 25.4858 4.39915 26.3236 3.68448 C 23.7444 5.69325 24.2171 6.08567 25.2815 6.632 Z" id="imagebot_12"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_11)" fill-opacity="0.47556" id="imagebot_10" d="M 23.0784 5.32199 C 22.8997 5.00299 22.3042 4.649 22.3042 4.36926 C 22.7485 3.88107 23.7212 3.26078 24.4479 2.70197 C 22.6428 3.93665 22.3711 4.35884 23.0784 5.32199 Z"/>
+  <path fill="#ffffff" stroke-width="1px" filter="url(#imagebot_9)" fill-opacity="0.47556" d="M 21.9172 4.07153 C 21.7386 3.65471 21.4111 3.26766 21.4111 3.26766 C 21.9227 2.88756 22.6987 2.64456 23.8227 2.19583 C 22.0473 3.10301 21.2695 3.04883 21.9172 4.07153 Z" id="imagebot_8"/>
+  <path fill="#ffffff" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" filter="url(#imagebot_7)" fill-opacity="0.88889" id="imagebot_6" d="M 1.67162 36.4942 C 1.16272 36.0595 0.6775 35.5656 0.4807 34.3506 L 2.32663 32.8619 C 0.801029 34.247 0.82039 35.4261 1.67162 36.4942 Z"/>
+  <path fill="#ffffff" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" filter="url(#imagebot_5)" fill-opacity="0.88889" id="imagebot_4" d="M 4.82755 27.3837 C 4.17255 25.121 5.12528 19.6428 5.12528 19.6428 C 4.69541 23.2867 3.06053 25.2151 4.82755 27.3837 Z"/>
+  <path fill="#ffffff" stroke-width="1px" stroke-miterlimit="4" stroke-dashoffset="0" filter="url(#imagebot_3)" fill-opacity="0.49554" id="imagebot_2" d="M 11.5562 9.93679 C 13.0642 8.27494 16.3558 3.31357 15.7244 0.40946 L 17.2726 2.96993 C 16.2391 5.02694 13.797 7.90686 11.5562 9.93679 Z"/>
+ </g>
+</svg>
