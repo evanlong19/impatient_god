@@ -1,41 +1,42 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class FoodBarController : MonoBehaviour {
 
+	private static readonly System.DateTime UnixEpoch = new System.DateTime(1970, 1, 1, 0, 0, 0, System.DateTimeKind.Utc);
+
 	public static int maxFood = 5;
-	public static System.TimeSpan foodInterval = System.TimeSpan.FromSeconds(5);
-	
-	int foodCount;
-	System.DateTime lastFoodTime;
-	System.DateTime nextFoodTime;
+	public static long foodInterval = 5; //seconds
+
+	int foodCount = 5;
+	long lastFoodTime = GetCurrentUnixTimestampSeconds(); //seconds of UNIX time
+	long nextFoodTime; //seconds of UNIX time
 
 	public Sprite[] sprites = new Sprite[maxFood + 1];
 
 	public SpriteRenderer render;
+	public GUIText foodTimer;
 
 	// Use this for initialization
 	void Start () {
-		if (PlayerPrefs.HasKey ("foodCount")) {
-			foodCount = PlayerPrefs.GetInt ("foodCount");
-		} else {
-			foodCount = 5;
-		}
+		foodCount += (int)((GetCurrentUnixTimestampSeconds () - lastFoodTime) / foodInterval);
+		foodCount = Mathf.Min (maxFood, foodCount);
+		lastFoodTime = GetCurrentUnixTimestampSeconds () - (GetCurrentUnixTimestampSeconds () - lastFoodTime) % foodInterval;
+		nextFoodTime = lastFoodTime + foodInterval;
 		render.sprite = sprites[foodCount];
-		lastFoodTime = System.DateTime.Now;
-		print (System.DateTime.Now);
-		nextFoodTime = lastFoodTime.Add (foodInterval);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (System.DateTime.Now.CompareTo (nextFoodTime) > 0) {
+		if (GetCurrentUnixTimestampSeconds() > nextFoodTime) {
 			//Add food!
 			foodCount = Mathf.Min(foodCount + 1, maxFood);
 			render.sprite = sprites[foodCount];
-			lastFoodTime = System.DateTime.Now;
-			nextFoodTime = lastFoodTime.Add (foodInterval);
+			lastFoodTime = GetCurrentUnixTimestampSeconds();
+			nextFoodTime = lastFoodTime + foodInterval;
 		}
+		long timeToFood = nextFoodTime - GetCurrentUnixTimestampSeconds ();
+		foodTimer.text = "Next food in " + timeToFood/3600 + "h " + (timeToFood%3600)/60 + "m " + (timeToFood%60 + 1) + "s";
 	}
 
 	public bool useFood() {
@@ -46,8 +47,9 @@ public class FoodBarController : MonoBehaviour {
 		}
 		return hasFood;
 	}
-	
-	void OnApplicationQuit() {
-		PlayerPrefs.SetInt ("foodCount", foodCount);
+
+	public static long GetCurrentUnixTimestampSeconds()
+	{
+		return (long) (System.DateTime.UtcNow - UnixEpoch).TotalSeconds;
 	}
 }

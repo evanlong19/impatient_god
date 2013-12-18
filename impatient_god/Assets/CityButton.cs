@@ -3,11 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class CityButton : MonoBehaviour {
-	public static System.TimeSpan deathInterval = System.TimeSpan.FromSeconds(7);
+
+	private static readonly System.DateTime UnixEpoch = new System.DateTime(1970, 1, 1, 0, 0, 0, System.DateTimeKind.Utc);
+
+	public static long minDeathInterval =5;
+	public static float maxDeathInterval = 10;
+	public static float twinProbability = 0.25f;
 	public static Color deadColor = Color.gray;
 
 	public FoodBarController foodBar;
 	public GameObject cityFolkPrefab;
+	public InfoBarController infoBar;
+	public GUIText cityCounter;
 
 	Vector2 cityBounds;
 	List<GameObject> folks = new List<GameObject>();
@@ -15,6 +22,14 @@ public class CityButton : MonoBehaviour {
 	int nFolks;
 	System.DateTime lastDeathTime;
 	System.DateTime nextDeathTime;
+	long totalPlayTime;
+	long lastDeathTime;
+	long nextDeathTime;
+
+	Vector2 cityBounds;
+	GameObject[] folks;
+	int nFolks = 0;
+	int livingFolks = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +49,9 @@ public class CityButton : MonoBehaviour {
 		lastDeathTime = System.DateTime.Now;
 		nextDeathTime = lastDeathTime.Add (deathInterval);
 		//TODO: Randomize death Interval
+		folks = new GameObject[64];
+		lastDeathTime = GetCurrentUnixTimestampSeconds();	
+		nextDeathTime = lastDeathTime + (long)Random.Range(minDeathInterval, maxDeathInterval);
 	}
 
 	// Update is called once per frame
@@ -41,27 +59,53 @@ public class CityButton : MonoBehaviour {
 
 		moveFolks ();
 		if (System.DateTime.Now.CompareTo (nextDeathTime) > 0) {
+		if (GetCurrentUnixTimestampSeconds() > nextDeathTime) {
 			//Kill a folk!
 			foreach (GameObject folk in folks) {
+				if (folk == null) continue;
 				if (folk.GetComponent<SpriteRenderer>().color != deadColor) {
 					folk.GetComponent<SpriteRenderer>().color = deadColor;
+					livingFolks--;
+					cityCounter.text = livingFolks.ToString();
+					infoBar.setText("A folk has died!");
 					break;
 				}
 			}
-			lastDeathTime = System.DateTime.Now;
-			nextDeathTime = lastDeathTime.Add (deathInterval);
+			lastDeathTime  = GetCurrentUnixTimestampSeconds();
+			nextDeathTime = lastDeathTime + (long)Random.Range(minDeathInterval, maxDeathInterval);
+
 		}
 	}
 
 	void OnMouseUp () {
-		print ("clicked!");
 		if (foodBar.useFood ()) {
 			addFolk(nFolks);
 			//print ("New folk!");
+			Vector3 newPosition;
+			GameObject newFolk;
+			if (Random.value < twinProbability) {
+				infoBar.setText ("Twins were born!!");
+				newPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+				newPosition.x += Random.Range(-cityBounds.x, cityBounds.x);
+				newPosition.y += Random.Range(-cityBounds.y, cityBounds.y);
+				newFolk = (GameObject)Instantiate(cityFolkPrefab, newPosition, Quaternion.identity);
+				folks[nFolks] = newFolk;
+				nFolks++;
+				livingFolks++;
+			} else {
+				infoBar.setText ("A new city folk is born!");
+			}
+			newPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+			newPosition.x += Random.Range(-cityBounds.x, cityBounds.x);
+			newPosition.y += Random.Range(-cityBounds.y, cityBounds.y);
+			newFolk = (GameObject)Instantiate(cityFolkPrefab, newPosition, Quaternion.identity);
+			folks[nFolks] = newFolk;
 			nFolks++;
+			livingFolks++;
 		} else {
-			//print ("Not enough food!");
+			infoBar.setText("Can't create more life, not enough food");
 		}
+		cityCounter.text = livingFolks.ToString ();
 	}
 
 
@@ -123,5 +167,14 @@ public class CityButton : MonoBehaviour {
 	void OnApplicationQuit() {
 		print ("exit");
 		PlayerPrefs.SetInt ("nFolks", nFolks);
+	}
+
+	void onApplicationQuit() {
+		totalPlayTime += (long)Time.realtimeSinceStartup;
+	}
+
+	public static long GetCurrentUnixTimestampSeconds()
+	{
+		return (long) (System.DateTime.UtcNow - UnixEpoch).TotalSeconds;
 	}
 }
