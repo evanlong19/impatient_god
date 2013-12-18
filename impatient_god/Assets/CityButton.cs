@@ -8,6 +8,7 @@ public class CityButton : MonoBehaviour {
 
 	public FoodBarController foodBar;
 	public GameObject cityFolkPrefab;
+	public GUIText infoBar;
 
 	System.DateTime lastDeathTime;
 	System.DateTime nextDeathTime;
@@ -32,6 +33,7 @@ public class CityButton : MonoBehaviour {
 			foreach (GameObject folk in folks) {
 				if (folk.GetComponent<SpriteRenderer>().color != deadColor) {
 					folk.GetComponent<SpriteRenderer>().color = deadColor;
+					infoBar.text = "A folk has died!";
 					break;
 				}
 			}
@@ -41,9 +43,8 @@ public class CityButton : MonoBehaviour {
 	}
 
 	void OnMouseUp () {
-		print ("clicked!");
 		if (foodBar.useFood ()) {
-			print ("New folk!");
+			infoBar.text = "A new city folk is born!";
 			Vector3 newPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 			newPosition.x += Random.Range(-cityBounds.x, cityBounds.x);
 			newPosition.y += Random.Range(-cityBounds.y, cityBounds.y);
@@ -52,7 +53,7 @@ public class CityButton : MonoBehaviour {
 			folks[nFolks] = newFolk;
 			nFolks++;
 		} else {
-			print ("Not enough food!");
+			infoBar.text = "Can't create more life, not enough food!";
 		}
 	}
 }

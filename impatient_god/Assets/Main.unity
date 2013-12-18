@@ -134,7 +134,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.78999996
+  orthographic size: 5.01288509
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -150,7 +150,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1084365821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0658859909, y: .076805532, z: -10}
+  m_LocalPosition: {x: .0296364278, y: -.241602555, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -224,6 +224,109 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5bb7b9a45c48bfb42b403c06d1ef9cd5, type: 3}
   - {fileID: 21300000, guid: 16ec37cf3a36c4a4ca5430dcefb9b135, type: 3}
   render: {fileID: 1110971151}
+--- !u!1 &1904404371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1904404373}
+  - 132: {fileID: 1904404372}
+  m_Layer: 0
+  m_Name: InfoBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!132 &1904404372
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1904404371}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: Click on city to create life.
+  m_Anchor: 6
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!4 &1904404373
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1904404371}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .100000001, y: .0199999996, z: -.200000003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!1 &2103472857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2103472858}
+  - 61: {fileID: 2103472860}
+  - 114: {fileID: 2103472859}
+  m_Layer: 0
+  m_Name: CityButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2103472858
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2103472857}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -.200000003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2130257149}
+--- !u!114 &2103472859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2103472857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4cab06e5228074bac6af2089558508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodBar: {fileID: 1110971153}
+  cityFolkPrefab: {fileID: 100000, guid: 6f16941fe9414b24280bec2a384417ad, type: 2}
+  infoBar: {fileID: 1904404372}
+--- !u!61 &2103472860
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2103472857}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 4.67000008, y: 3.50999999}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &2130257147
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +377,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.7051785, y: .017433539, z: 0}
   m_LocalScale: {x: 2.53809643, y: 2.53809261, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2103472858}
   m_Father: {fileID: 0}
 --- !u!114 &2130257150
 MonoBehaviour:
@@ -282,20 +386,21 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2130257147}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b4cab06e5228074bac6af2089558508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   foodBar: {fileID: 1110971153}
   cityFolkPrefab: {fileID: 100000, guid: 6f16941fe9414b24280bec2a384417ad, type: 2}
+  infoBar: {fileID: 1904404372}
 --- !u!61 &2130257151
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2130257147}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Size: {x: 4.67000008, y: 3.50999999}
