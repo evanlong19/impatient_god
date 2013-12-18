@@ -1,0 +1,114 @@
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class CityButton : MonoBehaviour {
+
+	public static System.TimeSpan deathInterval = System.TimeSpan.FromSeconds(7);
+	public static Color deadColor = Color.gray;
+
+	public FoodBarController foodBar;
+	public GameObject cityFolkPrefab;
+
+<<<<<<< HEAD
+	Bounds cityBounds;
+	List<GameObject> folks = new List<GameObject>();
+	int nFolks;
+
+	// Use this for initialization
+	void Start () {
+		cityBounds = GetComponent<SpriteRenderer> ().sprite.bounds;
+		if (PlayerPrefs.HasKey ("foodCount")) {
+			nFolks = PlayerPrefs.GetInt ("nFolks");
+			int nFolksIter = 0;
+			while (nFolksIter < nFolks){
+				addFolk (nFolksIter);
+				nFolksIter++;
+			}
+		} else {
+			nFolks = 0;
+		}
+=======
+	System.DateTime lastDeathTime;
+	System.DateTime nextDeathTime;
+
+	Vector2 cityBounds;
+	GameObject[] folks;
+	int nFolks = 0;
+
+	// Use this for initialization
+	void Start () {
+		cityBounds = GetComponent<BoxCollider2D> ().size;
+		folks = new GameObject[64];
+		lastDeathTime = System.DateTime.Now;
+		nextDeathTime = lastDeathTime.Add (deathInterval);
+		//TODO: Randomize death Interval
+>>>>>>> 0a0e9b9a773e98a7194aedec365d763c69f1012d
+	}
+
+	// Update is called once per frame
+	void Update () {
+<<<<<<< HEAD
+		moveFolks ();
+=======
+		if (System.DateTime.Now.CompareTo (nextDeathTime) > 0) {
+			//Kill a folk!
+			foreach (GameObject folk in folks) {
+				if (folk.GetComponent<SpriteRenderer>().color != deadColor) {
+					folk.GetComponent<SpriteRenderer>().color = deadColor;
+					break;
+				}
+			}
+			lastDeathTime = System.DateTime.Now;
+			nextDeathTime = lastDeathTime.Add (deathInterval);
+		}
+>>>>>>> 0a0e9b9a773e98a7194aedec365d763c69f1012d
+	}
+
+	void OnMouseUp () {
+		print ("clicked!");
+		if (foodBar.useFood ()) {
+<<<<<<< HEAD
+			print ("New citizen!");
+			addFolk(nFolks);
+=======
+			print ("New folk!");
+			Vector3 newPosition = new Vector3(Random.Range(-cityBounds.x/2, cityBounds.x/2), 
+			                                  Random.Range(-cityBounds.y/2, cityBounds.y/2), 
+			                                  transform.position.z);
+			GameObject newFolk = (GameObject)Instantiate(cityFolkPrefab, newPosition, Quaternion.identity);
+			print (newFolk.transform.position);
+			folks[nFolks] = newFolk;
+>>>>>>> 0a0e9b9a773e98a7194aedec365d763c69f1012d
+			nFolks++;
+		} else {
+			print ("Not enough food!");
+		}
+	}
+
+	void addFolk (int folkPos){
+		GameObject newFolk = (GameObject)Instantiate (cityFolkPrefab);
+		float newX = Random.Range (cityBounds.min.x, cityBounds.max.x);
+		float newY = Random.Range (cityBounds.min.y, cityBounds.max.y);
+		newFolk.transform.Translate (newX, newY, 0);
+		print (newFolk.transform.position);
+		folks.Add(newFolk);
+	}
+
+	void moveFolks(){
+		if (folks.Count > 0) {
+			int counter = 0;
+			while (counter < folks.Count){
+				GameObject folk = folks[counter];
+				print (folk.transform.position);
+				folk.transform.Translate (0.05F,0,0);
+				folks[counter] = folk;
+				counter++;
+			}
+		}
+	}
+
+	void OnApplicationQuit() {
+		PlayerPrefs.SetInt ("nFolks", nFolks);
+	}
+}
