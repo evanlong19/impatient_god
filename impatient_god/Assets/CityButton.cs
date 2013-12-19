@@ -13,13 +13,16 @@ public class CityButton : MonoBehaviour {
 	public FoodBarController foodBar;
 	public GameObject cityFolkPrefab;
 	public InfoBarController infoBar;
+	public GUIText cityCounter;
 
+	long totalPlayTime;
 	long lastDeathTime;
 	long nextDeathTime;
 
 	Vector2 cityBounds;
 	GameObject[] folks;
 	int nFolks = 0;
+	int livingFolks = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -34,8 +37,11 @@ public class CityButton : MonoBehaviour {
 		if (GetCurrentUnixTimestampSeconds() > nextDeathTime) {
 			//Kill a folk!
 			foreach (GameObject folk in folks) {
+				if (folk == null) continue;
 				if (folk.GetComponent<SpriteRenderer>().color != deadColor) {
 					folk.GetComponent<SpriteRenderer>().color = deadColor;
+					livingFolks--;
+					cityCounter.text = livingFolks.ToString();
 					infoBar.setText("A folk has died!");
 					break;
 				}
@@ -58,6 +64,7 @@ public class CityButton : MonoBehaviour {
 				newFolk = (GameObject)Instantiate(cityFolkPrefab, newPosition, Quaternion.identity);
 				folks[nFolks] = newFolk;
 				nFolks++;
+				livingFolks++;
 			} else {
 				infoBar.setText ("A new city folk is born!");
 			}
@@ -67,9 +74,15 @@ public class CityButton : MonoBehaviour {
 			newFolk = (GameObject)Instantiate(cityFolkPrefab, newPosition, Quaternion.identity);
 			folks[nFolks] = newFolk;
 			nFolks++;
+			livingFolks++;
 		} else {
 			infoBar.setText("Can't create more life, not enough food");
 		}
+		cityCounter.text = livingFolks.ToString ();
+	}
+
+	void onApplicationQuit() {
+		totalPlayTime += (long)Time.realtimeSinceStartup;
 	}
 
 	public static long GetCurrentUnixTimestampSeconds()

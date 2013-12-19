@@ -15,6 +15,7 @@ public class FoodBarController : MonoBehaviour {
 	public Sprite[] sprites = new Sprite[maxFood + 1];
 
 	public SpriteRenderer render;
+	public GUIText foodTimer;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +35,8 @@ public class FoodBarController : MonoBehaviour {
 			lastFoodTime = GetCurrentUnixTimestampSeconds();
 			nextFoodTime = lastFoodTime + foodInterval;
 		}
+		long timeToFood = nextFoodTime - GetCurrentUnixTimestampSeconds ();
+		foodTimer.text = "Next food in " + timeToFood/3600 + "h " + (timeToFood%3600)/60 + "m " + (timeToFood%60 + 1) + "s";
 	}
 
 	public bool useFood() {
